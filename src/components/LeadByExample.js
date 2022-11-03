@@ -183,14 +183,17 @@ export default function Lbe( {useCategoriesList} ) {
     return (
       <div className="block_lbe">
         <div className="header_lbe">
-          <div className="header_lbe_title"><h3>{title}</h3></div>
+          <div className="header_lbe_title"><h3>{title}</h3>
+          </div>
+            <p><em>{authors}</em>
+            </p>
+            <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a>.</p>
+
           <div className="header_lbe_link"><MultiUrl name="Permalink" url={"./?text=".concat(doi)} /></div>
         </div>
 
         <p>{subdiscipline.map((tag,idx) => 
           <SubdButton key={idx} name={tag} />
-        )}{tags.map((tag,idx) => 
-          <TagButton key={idx} name={tag} />
         )}</p>
 
         <details className="details_lbe">
@@ -198,19 +201,12 @@ export default function Lbe( {useCategoriesList} ) {
           <summary>Details</summary>
 
           <div className="collapsible_lbe">
-            <h4>Authors</h4>
-            
-            <p><em>{authors}</em></p>
 
             <h4>Description</h4>
 
             <p>{description}</p>
 
-            <h4>Publication</h4>
-
-            <p><em>{journal}</em> <strong>{pubyear}</strong>, DOI: <a href={linkpub} target="_blank">{doi}</a></p>
-
-            <h4>Links to datasets</h4>
+            <h4>Link(s) to dataset(s)</h4>
 
             <p>
               {linkdata.map((props, idx) => (
@@ -229,9 +225,14 @@ export default function Lbe( {useCategoriesList} ) {
 
   function LbeButtons() {
     return(
-      <><div className="filter_lbe"><h4>Filter subdisciplines</h4><p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter journals</h4><p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p></div>
-      <div className="filter_lbe"><h4>Filter keywords</h4><p>{categories.map((props, idx) => <TagButton key={idx} name={props} />)}</p></div></>
+      <>
+        <div className="filter_lbe"><h4><br></br>Filter by subdisciplines</h4>
+          <p>{subdiscs.map((props, idx) => <SubdButton key={idx} name={props} />)}</p>
+        </div>
+        <div className="filter_lbe"><h4>Filter by journals</h4>
+          <p>{journals.map((props, idx) => <JournalButton key={idx} name={props} />)}</p>
+        </div>
+      </>
     )
   }
 
