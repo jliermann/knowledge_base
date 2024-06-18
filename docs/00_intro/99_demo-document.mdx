@@ -1,0 +1,27 @@
+---
+title: "Demo Document"
+slug: "/demo"
+---
+
+import VideoPrivacy from "@site/src/components/video-privacy/video-privacy";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+This page contains a video.
+
+<VideoPrivacy
+    imageUrl="/img/ontologies_preview.webp"
+    info="To view embedded videos from Youtube, please indicate your consent to load this video from an external source."
+    buttonText="I agree"
+    customClass="button button--primary"
+>
+    <iframe
+        width="800"
+        height="600"
+        src="https://www.youtube.com/embed/b5c2oawLPU8"
+        title="Ontologien - was ist das eigentlich?"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+    ></iframe>
+</VideoPrivacy>
