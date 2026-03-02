@@ -27,9 +27,9 @@ function FeatureDial({ url, imgUrl, text, dial, ...props }) {
       </Link>
       <div className={styles.featureDialContent}>
         {dial.map((item, idx) => (
-          <div
+          <Link to={item.url}
             key={idx}
-            className={styles.featureDialItem}
+            className={clsx("button button--negative", styles.featureDialItem)}
             style={{ "--feature-item-index": idx }}
           >
             <div>
@@ -38,7 +38,7 @@ function FeatureDial({ url, imgUrl, text, dial, ...props }) {
             <div>
               {item.text}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
