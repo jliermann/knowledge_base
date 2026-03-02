@@ -51,6 +51,8 @@
 }
 
 .featureDialItem {
+  --feature-item-index: 0;
+  --feature-item-delay-step: 40ms;
   margin: 12px 16px;
   padding: calc(
       var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
@@ -86,22 +88,7 @@
 
 .featureDial:hover .featureDialItem {
   animation: featureDialItemAppear 260ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-.featureDial:hover .featureDialItem:nth-child(2) {
-  animation-delay: 40ms;
-}
-
-.featureDial:hover .featureDialItem:nth-child(3) {
-  animation-delay: 80ms;
-}
-
-.featureDial:hover .featureDialItem:nth-child(4) {
-  animation-delay: 120ms;
-}
-
-.featureDial:hover .featureDialItem:nth-child(n + 5) {
-  animation-delay: 160ms;
+  animation-delay: calc(var(--feature-item-index) * var(--feature-item-delay-step));
 }
 
 @keyframes featureDialItemAppear {

@@ -27,7 +27,11 @@ function FeatureDial({ url, imgUrl, text, dial, ...props }) {
       </Link>
       <div className={styles.featureDialContent}>
         {dial.map((item, idx) => (
-          <div key={idx} className={styles.featureDialItem}>
+          <div
+            key={idx}
+            className={styles.featureDialItem}
+            style={{ "--feature-item-index": idx }}
+          >
             <div>
               <img src={useBaseUrl(item.imgUrl)} style={{ width: "40px" }} alt={item.alt ?? item.text} />
             </div>
