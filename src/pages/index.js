@@ -9,12 +9,15 @@ import Translate from "@docusaurus/Translate";
 import styles from "./index.module.css";
 import clsx from "clsx";
 
+import domains from "@site/src/data/domains.js";
+
 const features = [
   {
     text: <Translate>Domains</Translate>,
     imgUrl: "/img/nfdi4chem_Domains_white.svg",
     alt: "Domains Icon",
     url: "/docs/domain_guide",
+    dial: domains,
   },
   {
     text: <Translate>Roles</Translate>,
