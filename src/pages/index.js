@@ -10,6 +10,7 @@ import styles from "./index.module.css";
 import clsx from "clsx";
 
 import domains from "@site/src/data/domains.js";
+import roles from "@site/src/data/roles.js";
 
 const features = [
   {
@@ -24,6 +25,7 @@ const features = [
     imgUrl: "/img/nfdi4chem_Roles_white.svg",
     alt: "Roles Icon",
     url: "/docs/role_guide",
+    dial: roles,
   },
   {
     text: <Translate>How to Handle Your Data</Translate>,
