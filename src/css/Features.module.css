@@ -35,3 +35,48 @@
   text-align: center;
   white-space: normal;
 }
+
+.featureDial {
+  float: center;
+  overflow: hidden;
+}
+
+.featureDialContent {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  flex-grow: 1;
+  z-index: 1;
+  justify-content: center;
+}
+
+.featureDialItem {
+  margin: 12px 16px;
+  padding: calc(
+      var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
+    )
+    calc(
+      var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier)
+    );
+  background-color: white;
+  color: var(--ifm-color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.featureDialItem div {
+  margin: 0 8px;
+}
+
+.featureDial:hover .featureButton {
+  box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.featureDial:hover .featureDialContent {
+  display: block;
+}
