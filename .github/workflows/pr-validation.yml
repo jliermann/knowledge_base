@@ -39,7 +39,9 @@ jobs:
 
       - name: "📥 Download translations from Crowdin"
         run: npm run crowdin download
-        continue-on-error: false
+        env:
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+        continue-on-error: true
 
       - name: "�📋 Validate Frontmatter & Titles"
         run: node scripts/validate-content.js

@@ -13,20 +13,20 @@ import domains from "@site/src/data/domains.js";
 
 const features = [
   {
-    text: <Translate>Domains</Translate>,
+    text: <Translate>Your Domain</Translate>,
     imgUrl: "/img/nfdi4chem_Domains_white.svg",
     alt: "Domains Icon",
     url: "/docs/domain_guide",
     dial: domains,
   },
   {
-    text: <Translate>Roles</Translate>,
+    text: <Translate>Your Role</Translate>,
     imgUrl: "/img/nfdi4chem_Roles_white.svg",
     alt: "Roles Icon",
     url: "/docs/role_guide",
   },
   {
-    text: <Translate>Handling Data</Translate>,
+    text: <Translate>How to Handle Your Data</Translate>,
     imgUrl: "/img/nfdi4chem_Handling_Data_white.svg",
     alt: "Handling Data Icon",
     url: "/docs/data_guide",
@@ -38,7 +38,7 @@ const features = [
     url: "/docs/smartlab",
   },
   {
-    text: <Translate>Data Publishing</Translate>,
+    text: <Translate>How to Publish Your Data</Translate>,
     imgUrl: "/img/nfdi4chem_Data_Publication_white.svg",
     alt: "Data Publishing Icon",
     url: "/docs/data_publishing",
