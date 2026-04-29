@@ -22,6 +22,8 @@ In chemistry, data can include spectra, structures, reactions, and metadata. The
 - Add clear metadata, including units and context.
 - Check repository requirements early.
 - If instruments produce proprietary files, export an open exchange format as well.
+- For structure data, store both an exchange file (e.g. SDF) and identifiers (SMILES, InChI).
+- For spectroscopy, use JCAMP-DX for exchange when available.
 
 ## Common chemistry formats {#chemistry_formats}
 
@@ -52,8 +54,17 @@ In chemistry, data can include spectra, structures, reactions, and metadata. The
 - Mass spectrometry exchange and archiving: mzML.
 - Crystallography deposition: CIF.
 - Structure exchange: SDF, [SMILES](/docs/smiles), [InChI](/docs/inchi).
+- CTfiles (molfile, rxnfile, SDfile): use V2000 for broad interoperability; use V3000 if you need advanced features and tool support is confirmed.
+- Spectral exchange: JCAMP-DX is widely supported across techniques; for very large or complex datasets, check whether a more suitable format is required.
 
 When possible, select formats with broad software support and active community maintenance.
+
+## Common pitfalls
+
+- Keeping only proprietary instrument files without an open export.
+- Comparing SMILES strings without canonicalization.
+- Omitting stereochemistry in SMILES when isomers matter.
+- Sharing table files without clear units or column meaning.
 
 ## Sources and further information {#sources}
 
