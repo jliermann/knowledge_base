@@ -25,6 +25,25 @@ In chemistry, data can include spectra, structures, reactions, and metadata. The
 - For structure data, store both an exchange file (e.g. SDF) and identifiers (SMILES, InChI).
 - For spectroscopy, use JCAMP-DX for exchange when available.
 
+## Recommendations by use case
+
+- General table-like data exchange: CSV (with clear headers and units).
+- NMR data exchange: JCAMP-DX, nmrML, NMReDATA.
+- Mass spectrometry exchange and archiving: mzML.
+- Crystallography deposition: CIF.
+- Structure exchange: SDF, [SMILES](/docs/smiles), [InChI](/docs/inchi).
+- CTfiles (molfile, rxnfile, SDfile): use V2000 for broad interoperability; use V3000 if you need advanced features and tool support is confirmed.
+- Spectral exchange: JCAMP-DX is widely supported across techniques; for very large or complex datasets, check whether a more suitable format is required.
+
+When possible, select formats with broad software support and active community maintenance.
+
+## Common pitfalls
+
+- Keeping only proprietary instrument files without an open export.
+- Comparing SMILES strings without canonicalization.
+- Omitting stereochemistry in SMILES when isomers matter.
+- Sharing table files without clear units or column meaning.
+
 ## Common chemistry formats {#chemistry_formats}
 
 | Format              | Data type         | Maintainer            | Parent Format | Specification    |
@@ -46,25 +65,6 @@ In chemistry, data can include spectra, structures, reactions, and metadata. The
 | Bruker OPUS         | spectroscopy      | Bruker                | (binary)      | proprietary      |
 | Perkin Elmer        | spectroscopy      | Perkin Elmer          | ASCII, Text   | proprietary      |
 | ThermofFisher Grams | spectroscopy      | ThermoFisher          | binary        | proprietary      |
-
-## Recommendations by use case
-
-- General table-like data exchange: CSV (with clear headers and units).
-- NMR data exchange: JCAMP-DX, nmrML, NMReDATA.
-- Mass spectrometry exchange and archiving: mzML.
-- Crystallography deposition: CIF.
-- Structure exchange: SDF, [SMILES](/docs/smiles), [InChI](/docs/inchi).
-- CTfiles (molfile, rxnfile, SDfile): use V2000 for broad interoperability; use V3000 if you need advanced features and tool support is confirmed.
-- Spectral exchange: JCAMP-DX is widely supported across techniques; for very large or complex datasets, check whether a more suitable format is required.
-
-When possible, select formats with broad software support and active community maintenance.
-
-## Common pitfalls
-
-- Keeping only proprietary instrument files without an open export.
-- Comparing SMILES strings without canonicalization.
-- Omitting stereochemistry in SMILES when isomers matter.
-- Sharing table files without clear units or column meaning.
 
 ## Sources and further information {#sources}
 
