@@ -1,0 +1,62 @@
+---
+title: "Data Formats"
+slug: "/data_formats"
+---
+
+# Data formats {#data_formats}
+
+Choosing the right data format makes your research data easier to share, understand, and reuse. For [FAIR](/docs/fair) practice, use formats that are open, well documented, and accepted by your community.
+
+## Why this matters
+
+In chemistry, data can include spectra, structures, reactions, and metadata. The chosen format influences whether:
+
+- others can open your files,
+- repositories accept your submission,
+- your data remain usable in the long term.
+
+## Quick guidance for everyday work
+
+- Prefer open formats whenever possible.
+- Keep both raw data and processed data.
+- Add clear metadata, including units and context.
+- Check repository requirements early.
+- If instruments produce proprietary files, export an open exchange format as well.
+
+## Common chemistry formats {#chemistry_formats}
+
+| Format              | Data type         | Maintainer            | Parent Format | Specification    |
+| ------------------- | ----------------- | --------------------- | ------------- | ---------------- |
+| JCAMP-DX            | multiple          | IUPAC                 | ASCII, Text   | open             |
+| AnIML               | multiple          | ASTM                  | XML           | open             |
+| netCDF              | multiple          | UCAR                  | CDF           | open             |
+| CSV                 | multiple          | IETF-RFC              | ASCII, Text   | open             |
+| ASCII               | multiple          | (open)                |               | self explanatory |
+| ISA                 | multiple          | ISA Commons Community | TSV or JSON   | open             |
+| UDM                 | multiple          | Pistoia Alliance      | XML           | open             |
+| ADF                 | multiple          | Allotrope             | HDF5+RDF      | for members      |
+| mzML                | mass spectrometry | HUPO/PSI              | XML           | open             |
+| ANDI-MS             | mass spectrometry | ASTM International    | netCDF        | open             |
+| nmrML               | NMR               | COSMOS                | XML           | open             |
+| NMReDATA            | NMR               | NMReDATA Initiative   | SDF           | open             |
+| Bruker FID          | NMR               | Bruker                | (binary)      | proprietary      |
+| mnova               | NMR               | Mestrelab             | (binary)      | proprietary      |
+| Bruker OPUS         | spectroscopy      | Bruker                | (binary)      | proprietary      |
+| Perkin Elmer        | spectroscopy      | Perkin Elmer          | ASCII, Text   | proprietary      |
+| ThermofFisher Grams | spectroscopy      | ThermoFisher          | binary        | proprietary      |
+
+## Recommendations by use case
+
+- General table-like data exchange: CSV (with clear headers and units).
+- NMR data exchange: JCAMP-DX, nmrML, NMReDATA.
+- Mass spectrometry exchange and archiving: mzML.
+- Crystallography deposition: CIF.
+- Structure exchange: SDF, [SMILES](/docs/smiles), [InChI](/docs/inchi).
+
+When possible, select formats with broad software support and active community maintenance.
+
+## Sources and further information {#sources}
+
+- [The value of universally available raw NMR data for transparency, reproducibility, and integrity in natural product research](https://doi.org/10.1039/C7NP00064B)
+- [Dissemination of original NMR data enhances reproducibility and integrity in chemical research](https://doi.org/10.1039/C6NP00022C)
+- [NMReDATA: Tools and applications](https://doi.org/10.1002/mrc.5146)
